@@ -1,12 +1,15 @@
-# Docs — Progresso e Registro
+# Docs — Índice
 
-Este diretório contém os documentos de acompanhamento do roadmap.
+Este diretório contém a documentação de acompanhamento do roadmap.
 
 ## Comece por aqui
 - `../ROADMAP.pt-BR.md` — playbook completo
+- `../PROJECTS_TRACKING.md` — status geral
 
-## Templates
-- `PROJECT_TEMPLATE.md` — modelo para registrar qualquer projeto
+## Templates e padrões
+- `PROJECT_TEMPLATE.md` — modelo para documentar projetos
+- `DECISIONS.md` — decisões e trade-offs (log)
+- `WEEKLY_LOG.md` — diário semanal (resumo rápido)
 
 ## Projetos do portfólio
 - `project-01-cli.md`
