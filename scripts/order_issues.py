@@ -97,19 +97,31 @@ def main():
     all_issues = get_all_issues()
     print(f"Found {len(all_issues)} issues.")
 
-    # Group by milestone
+    # Group by milestone; fall back to inferring milestone from "PXX - " title prefix.
+    # Two-pass approach: collect milestoned issues first so that unmilestoned issues
+    # can be matched to the correct group by their "PXX" title prefix.
     milestones = {}
     no_milestone = []
     for issue in all_issues:
         ms = issue.get("milestone")
         if ms:
-            ms_title = ms["title"]
-            milestones.setdefault(ms_title, []).append(issue)
+            milestones.setdefault(ms["title"], []).append(issue)
+
+    for issue in all_issues:
+        if issue.get("milestone"):
+            continue
+        inferred = BARE_PREFIX_PATTERN.match(issue["title"])
+        if inferred:
+            p_code = re.match(r"(P\d+)", inferred.group(1)).group(1)
+            matched_ms = next(
+                (t for t in milestones if t.startswith(p_code)), p_code
+            )
+            milestones.setdefault(matched_ms, []).append(issue)
         else:
             no_milestone.append(issue)
 
     if no_milestone:
-        print(f"\nSkipping {len(no_milestone)} issues without a milestone.")
+        print(f"\nSkipping {len(no_milestone)} issues without a milestone or title prefix.")
 
     for ms_title, issues in sorted(milestones.items()):
         # Sort by issue number ascending (creation order = execution order)

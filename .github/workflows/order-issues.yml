@@ -5,7 +5,6 @@ on:
   push:
     branches:
       - main
-      - 'copilot/**'
     paths:
       - 'scripts/order_issues.py'
       - '.github/workflows/order-issues.yml'
