@@ -1,48 +1,53 @@
-# Welcome to the IA Agentes Roadmap Progress
+# ia-agentes-roadmap-progress
 
-## Repository Purpose
-This repository serves as a comprehensive tracking system for project phases in the IA Agentes initiative. It is designed to provide a clear overview of the project's progression, facilitate collaboration, and streamline the development process.
+Repositório para **documentar e rastrear** meu progresso no roadmap **“Dominar IA e Agentes de IA para Criar Aplicações e Negócios”**.
 
-## Folder Structure
-- **/phase1/**: Details and tasks for Phase 1
-- **/phase2/**: Details and tasks for Phase 2
-- **/phase3/**: Details and tasks for Phase 3
-- **/phase4/**: Details and tasks for Phase 4
-- **/phase5/**: Details and tasks for Phase 5
-- **/phase6/**: Details and tasks for Phase 6
-- **/phase7/**: Details and tasks for Phase 7
-- **/phase8/**: Details and tasks for Phase 8
+Este repo **não é** onde eu implemento os projetos finais (cada projeto terá seu próprio repositório). Aqui é o **hub de gestão**: planejamento, checklists, links, aprendizados, decisões e status.
 
-## Usage Instructions
-1. Clone the repository using `git clone https://github.com/emanueldsc/ia-agentes-roadmap-progress.git`
-2. Navigate to the project folder using `cd ia-agentes-roadmap-progress`
-3. Follow the detailed instructions in each phase folder for specific tasks.
+## Documento principal (playbook)
+- **Roadmap completo (PT-BR):** `ROADMAP.pt-BR.md`  
+  Contém: Fases 0–8, trilha de 90 dias, projetos de portfólio (tabela + detalhamento), como publicar no LinkedIn, como manter repositórios multi-language (PT/EN/ES) e glossário com âncoras.
 
-## Progress Table for 8 Phases
-| Phase | Description        | Status       |
-|-------|--------------------|--------------|
-| Phase 1 | Initialization    | ✅ Completed  |
-| Phase 2 | Development       | 🔄 In Progress |
-| Phase 3 | Testing           | ⏳ Pending     |
-| Phase 4 | Deployment        | ⏳ Pending     |
-| Phase 5 | Maintenance       | ⏳ Pending     |
-| Phase 6 | Evaluation        | ⏳ Pending     |
-| Phase 7 | Feedback          | ⏳ Pending     |
-| Phase 8 | Final Review      | ⏳ Pending     |
+## Como usar este repositório (fluxo recomendado)
+1. **Leia o playbook:** comece por `ROADMAP.pt-BR.md`.
+2. **Escolha o projeto atual:** selecione 1 dos projetos do portfólio.
+3. **Crie um repositório separado** para implementar o projeto (ex.: `01-python-automation-cli`).
+4. **Registre aqui o progresso**:
+   - atualize o arquivo `docs/project-XX-*.md` correspondente;
+   - inclua link do repo do projeto, screenshots, decisões e lições aprendidas.
+5. (Opcional) Use **Issues + Milestones** no GitHub para acompanhar tarefas por fase/projeto.
 
-## Quick Links
-- [Documentation](link_to_documentation)
-- [Issues](link_to_issues)
-- [Pull Requests](link_to_pull_requests)
+## Estrutura do repositório
+- `ROADMAP.pt-BR.md` — o guia principal (playbook)
+- `PROJECTS_TRACKING.md` — visão de status (checklist/tabela de acompanhamento)
+- `docs/` — páginas de acompanhamento por projeto e templates
+  - `docs/PROJECT_TEMPLATE.md` — modelo para documentar qualquer projeto
+  - `docs/project-01-cli.md` — Projeto 1: Python Automation CLI
+  - `docs/project-02-fastapi.md` — Projeto 2: FastAPI CRUD + Auth
+  - `docs/project-03-ml-pipeline.md` — Projeto 3: ML Pipeline (Churn/Fraude)
+  - `docs/project-04-llm-evals.md` — Projeto 4: LLM Prompt Playground + Evals
+  - `docs/project-05-rag.md` — Projeto 5: RAG Knowledge Base
+  - `docs/project-06-agent-operator.md` — Projeto 6: Agent Operator (Tickets/Email)
+  - `docs/project-07-saas-multi-tenant.md` — Projeto 7: Multi-tenant AI SaaS Starter
+  - `docs/project-08-mini-produto.md` — Projeto 8: Mini Produto de Nicho
 
-## Tips for Using Milestones and Labels
-- Utilize milestones to cluster issues and pull requests into different phases  
-- Apply labels for categorizing tasks (e.g., `bug`, `feature`, `urgent`). This will enhance efficiency in tracking.
+## Padrões de registro (para manter consistência)
+Em cada `docs/project-XX-*.md`:
+- status (planejado / em andamento / concluído)
+- o que foi entregue (demo, endpoints, UI, etc.)
+- decisões técnicas e trade-offs
+- problemas encontrados e como resolvi
+- próximos passos
+- link do repositório do projeto e (se existir) link do deploy
 
-## Project Repository Links
-- [Project Repository](https://github.com/emanueldsc/ia-agentes-roadmap-progress)  
-- [Contributing Guide](link_to_contributing_guide)  
-- [Code of Conduct](link_to_code_of_conduct)  
+## Como publicar progresso no LinkedIn
+O modelo de postagem está descrito em `ROADMAP.pt-BR.md`.  
+Sugestão: poste sempre que fechar um “marco” (MVP, avaliação, deploy, 1ª demo, 1º cliente piloto).
 
----  
-Update Date: 2026-04-09 00:29:22
+## Multi-language (PT/EN/ES)
+O padrão recomendado para manter seus projetos em 3 idiomas está em `ROADMAP.pt-BR.md` (documentação + app + prompts).
+
+---
+
+**Autor:** Emanuel Costa (@emanueldsc)  
+**Última atualização:** 2026-04-09
