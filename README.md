@@ -1,51 +1,48 @@
 # ia-agentes-roadmap-progress
 
-Repositório para **documentar e rastrear** meu progresso no roadmap **“Dominar IA e Agentes de IA para Criar Aplicações e Negócios”**.
+Este repositório é meu **hub de documentação e acompanhamento** do roadmap **“Dominar IA e Agentes de IA para Criar Aplicações e Negócios”**.
 
-Este repo **não é** onde eu implemento os projetos finais (cada projeto terá seu próprio repositório). Aqui é o **hub de gestão**: planejamento, checklists, links, aprendizados, decisões e status.
+Aqui eu **registro progresso, decisões, aprendizados e links**.  
+Os **projetos implementados** (código) ficam em **repositórios separados**, um para cada projeto do portfólio.
 
-## Documento principal (playbook)
-- **Roadmap completo (PT-BR):** `ROADMAP.pt-BR.md`  
-  Contém: Fases 0–8, trilha de 90 dias, projetos de portfólio (tabela + detalhamento), como publicar no LinkedIn, como manter repositórios multi-language (PT/EN/ES) e glossário com âncoras.
+## Comece por aqui
+- 📘 **Playbook/Roadmap completo (PT-BR):** [`ROADMAP.pt-BR.md`](./ROADMAP.pt-BR.md)  
+  Contém: Fases 0–8, trilha de 90 dias, projetos de portfólio (tabela + detalhamento), guia multi-language (PT/EN/ES), modelo de posts para LinkedIn e glossário com âncoras.
 
-## Como usar este repositório (fluxo recomendado)
-1. **Leia o playbook:** comece por `ROADMAP.pt-BR.md`.
-2. **Escolha o projeto atual:** selecione 1 dos projetos do portfólio.
-3. **Crie um repositório separado** para implementar o projeto (ex.: `01-python-automation-cli`).
-4. **Registre aqui o progresso**:
-   - atualize o arquivo `docs/project-XX-*.md` correspondente;
-   - inclua link do repo do projeto, screenshots, decisões e lições aprendidas.
-5. (Opcional) Use **Issues + Milestones** no GitHub para acompanhar tarefas por fase/projeto.
+- 📌 **Acompanhamento geral:** [`PROJECTS_TRACKING.md`](./PROJECTS_TRACKING.md)  
+  Tabela para ver rapidamente status, links e próximos passos.
 
-## Estrutura do repositório
-- `ROADMAP.pt-BR.md` — o guia principal (playbook)
-- `PROJECTS_TRACKING.md` — visão de status (checklist/tabela de acompanhamento)
-- `docs/` — páginas de acompanhamento por projeto e templates
-  - `docs/PROJECT_TEMPLATE.md` — modelo para documentar qualquer projeto
-  - `docs/project-01-cli.md` — Projeto 1: Python Automation CLI
-  - `docs/project-02-fastapi.md` — Projeto 2: FastAPI CRUD + Auth
-  - `docs/project-03-ml-pipeline.md` — Projeto 3: ML Pipeline (Churn/Fraude)
-  - `docs/project-04-llm-evals.md` — Projeto 4: LLM Prompt Playground + Evals
-  - `docs/project-05-rag.md` — Projeto 5: RAG Knowledge Base
-  - `docs/project-06-agent-operator.md` — Projeto 6: Agent Operator (Tickets/Email)
-  - `docs/project-07-saas-multi-tenant.md` — Projeto 7: Multi-tenant AI SaaS Starter
-  - `docs/project-08-mini-produto.md` — Projeto 8: Mini Produto de Nicho
+## Como usar este repo (fluxo recomendado)
+1. Leia o `ROADMAP.pt-BR.md`.
+2. Escolha o projeto atual do portfólio (Projetos 01–08).
+3. Crie um repositório separado para implementar o projeto (ex.: `01-python-automation-cli`).
+4. Volte aqui e atualize a documentação do projeto em `docs/`:
+   - status
+   - entregáveis
+   - decisões e trade-offs
+   - aprendizados
+   - links (repo, demo, post no LinkedIn)
+5. (Opcional) Use Issues/Milestones para quebrar cada projeto em tarefas e marcar progresso.
 
-## Padrões de registro (para manter consistência)
-Em cada `docs/project-XX-*.md`:
-- status (planejado / em andamento / concluído)
-- o que foi entregue (demo, endpoints, UI, etc.)
-- decisões técnicas e trade-offs
-- problemas encontrados e como resolvi
-- próximos passos
-- link do repositório do projeto e (se existir) link do deploy
+## Estrutura
+- `ROADMAP.pt-BR.md` — documento principal (playbook)
+- `PROJECTS_TRACKING.md` — visão de status
+- `docs/` — documentação por projeto + templates + diário
 
-## Como publicar progresso no LinkedIn
-O modelo de postagem está descrito em `ROADMAP.pt-BR.md`.  
-Sugestão: poste sempre que fechar um “marco” (MVP, avaliação, deploy, 1ª demo, 1º cliente piloto).
+## Documentação por projeto (docs/)
+Cada arquivo `docs/project-XX-*.md` é o “cartão” do projeto, onde você registra:
+- Objetivo + escopo
+- Stack e decisões
+- Entregáveis (Definition of Done)
+- Log semanal (diário de progresso)
+- Links para repo do projeto, demo e LinkedIn
 
 ## Multi-language (PT/EN/ES)
-O padrão recomendado para manter seus projetos em 3 idiomas está em `ROADMAP.pt-BR.md` (documentação + app + prompts).
+O padrão para manter **documentação e/ou app** em três idiomas está descrito no `ROADMAP.pt-BR.md`.  
+Recomendação: README em inglês como padrão + versões PT-BR e ES com “language switch”.
+
+## LinkedIn
+O modelo repetível de post (problema → o que construí → stack → aprendizados → link → próximo passo) está no `ROADMAP.pt-BR.md`.
 
 ---
 
