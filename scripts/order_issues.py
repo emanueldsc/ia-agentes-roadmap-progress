@@ -110,9 +110,9 @@ def main():
     for issue in all_issues:
         if issue.get("milestone"):
             continue
-        inferred = BARE_PREFIX_PATTERN.match(issue["title"])
-        if inferred:
-            p_code = re.match(r"(P\d+)", inferred.group(1)).group(1)
+        prefix_match = BARE_PREFIX_PATTERN.match(issue["title"])
+        if prefix_match:
+            p_code = prefix_match.group(1).split()[0]
             matched_ms = next(
                 (t for t in milestones if t.startswith(p_code)), p_code
             )
