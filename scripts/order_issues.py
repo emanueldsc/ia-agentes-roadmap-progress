@@ -37,8 +37,13 @@ def github_request(method, path, data=None):
 
     body = json.dumps(data).encode() if data else None
     req = urllib.request.Request(url, data=body, headers=headers, method=method)
-    with urllib.request.urlopen(req) as resp:
-        return json.loads(resp.read())
+    try:
+        with urllib.request.urlopen(req) as resp:
+            return json.loads(resp.read())
+    except urllib.error.HTTPError as exc:
+        error_body = exc.read().decode(errors="replace")
+        print(f"GitHub API error {exc.code} on {method} {url}: {error_body}")
+        raise
 
 
 def get_all_issues():
@@ -125,7 +130,7 @@ def main():
             print(f"    Before: {current_title}")
             print(f"    After:  {new_title}")
             update_issue_title(number, new_title)
-            time.sleep(0.5)  # Respect rate limits
+            time.sleep(0.3)  # Respect rate limits
 
     print("\nDone.")
 
