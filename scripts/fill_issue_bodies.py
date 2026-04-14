@@ -2201,7 +2201,8 @@ def github_request(method: str, path: str, data: dict | None = None) -> dict:
     req = urllib.request.Request(url, data=body, headers=headers, method=method)
     try:
         with urllib.request.urlopen(req) as resp:
-            return json.loads(resp.read())
+            raw = resp.read()
+            return json.loads(raw) if raw else {}
     except urllib.error.HTTPError as exc:
         error_body = exc.read().decode(errors="replace")
         print(f"GitHub API error {exc.code} on {method} {url}: {error_body}")
@@ -2246,7 +2247,7 @@ def main() -> None:
                     continue
                 update_issue_body(number, body)
                 print(" — updated ✓")
-                time.sleep(0.5)  # be nice to the API
+                time.sleep(0.3)  # be nice to the API
             except urllib.error.HTTPError:
                 print(" — ERROR (see above)")
         else:
